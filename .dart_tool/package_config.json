@@ -1,0 +1,13 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "anaya_timer",
+      "rootUri": "../",
+      "packageUri": "lib/"
+    }
+  ],
+  "generated": "2021-06-25T08:01:19.364245Z",
+  "generator": "pub",
+  "generatorVersion": "2.11.0-213.1.beta"
+}
