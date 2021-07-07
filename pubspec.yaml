@@ -1,11 +1,11 @@
 name: anaya_timer
 description: A recursive timer for Dart.
 
-homepage: https://github.com/afrozopsy
+homepage: https://github.com/afrozopsy/AnayaTimer/tree/master
 
-version: 0.0.1
+version: 0.0.2
 
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+  sdk: '>=2.8.4 <3.0.0'
 
 dependencies: 

@@ -13,19 +13,24 @@ class AnayaTimer {
   Stopwatch stopwatch;
   int noOfTicks;
 
+  bool isTerminated;
+
   AnayaTimer(
     this.duration,
     this.callBack
   ){
     stopwatch = Stopwatch();
     noOfTicks = 0;
+
+    isTerminated = false;
   }
 
   void _loop() {
 
     if(
       (stopwatch.elapsed.inMilliseconds >= duration.inMilliseconds) &&
-      stopwatch.isRunning
+      stopwatch.isRunning &&
+      !isTerminated
     ){
 
       callBack();
@@ -34,7 +39,10 @@ class AnayaTimer {
 
     } else {
 
-      if(stopwatch.isRunning){
+      if(
+        stopwatch.isRunning &&
+        !isTerminated
+      ){
         _callLoop();
       }
 
@@ -97,6 +105,19 @@ class AnayaTimer {
     stopwatch.reset();
     stopwatch.start();
     _loop();
+  }
+
+  /**
+   * Sets the [stopwatch.isRunning] to false and [isTerminated] to true.
+   * Timer stops permanetly. This action is irreversible. Once a timer has
+   * been disposed. Its [callBack] will never be invoked again.
+   *
+   * If [AnayaTimer] has already been disposed then calling [dispose] on it
+   * again has no effect.
+   */
+  void dispose(){
+    stopwatch.stop();
+    isTerminated = true;
   }
 
 }

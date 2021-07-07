@@ -4,10 +4,11 @@
     {
       "name": "anaya_timer",
       "rootUri": "../",
-      "packageUri": "lib/"
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
     }
   ],
-  "generated": "2021-06-25T08:01:19.364245Z",
+  "generated": "2021-07-07T06:22:02.406814Z",
   "generator": "pub",
-  "generatorVersion": "2.11.0-213.1.beta"
+  "generatorVersion": "2.8.4"
 }
